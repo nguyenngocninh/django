@@ -4,7 +4,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                dir("${WORKSPACE}") {
+                    // Now you are inside the workspace directory
+                    sh 'docker-compose build' // Print the current directory (workspace)
+
+                    // You can perform other actions inside the workspace directory here
+                }
             }
         }
         stage('Test') {
@@ -16,7 +21,7 @@ pipeline {
             steps {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
-                    sh 'pwd' // Print the current directory (workspace)
+                    sh 'docker-compose up'
                     
                     // You can perform other actions inside the workspace directory here
                 }
