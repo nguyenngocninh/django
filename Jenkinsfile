@@ -14,7 +14,12 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                ls
+                dir("${WORKSPACE}") {
+                    // Now you are inside the workspace directory
+                    sh 'pwd' // Print the current directory (workspace)
+                    
+                    // You can perform other actions inside the workspace directory here
+                }
             }
         }
         //stage("ssh-server") {
