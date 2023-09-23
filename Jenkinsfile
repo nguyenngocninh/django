@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
-                    sh 'docker run -p 3000:3000 web:latest' // Print the current directory (workspace)
+                    sh 'docker-compose build' // Print the current directory (workspace)
 
                     // You can perform other actions inside the workspace directory here
                 }
