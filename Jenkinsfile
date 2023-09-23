@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
-                    sh 'docker-compose build' // Print the current directory (workspace)
+                    sh 'ls' // Print the current directory (workspace)
 
                     // You can perform other actions inside the workspace directory here
                 }
