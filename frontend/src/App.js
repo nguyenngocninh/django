@@ -14,7 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <p>The date is {currentDate} and the time is {currentTime}.</p> <br/>
+      <p>The date is {currentDate} and the time is {currentTime}!.</p> <br/>
 
       </header>
     </div>
