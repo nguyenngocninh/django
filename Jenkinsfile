@@ -6,7 +6,7 @@ pipeline {
             steps {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
-                    sh 'ls' // Print the current directory (workspace)
+                    sh 'docker-compose build' // Print the current directory (workspace)
 
                     // You can perform other actions inside the workspace directory here
                 }
@@ -22,7 +22,7 @@ pipeline {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
                     sh 'ls'
-                    sh 'docker run  -p 3000:3000 -v ./frontend:/frontend  demo_djago_main_web:latest'
+                    sh 'docker-compose up'
                     
                     // You can perform other actions inside the workspace directory here
                 }
