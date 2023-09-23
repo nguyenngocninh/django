@@ -22,7 +22,7 @@ pipeline {
                 dir("${WORKSPACE}") {
                     // Now you are inside the workspace directory
                     sh 'ls'
-                    //sh 'docker-compose up'
+                    sh 'docker-compose up'
                     
                     // You can perform other actions inside the workspace directory here
                 }
